@@ -118,7 +118,7 @@ function QueryString_Parse(){
 
 function viewStoryTable(){
     // s = story_id
-	s = story_table[1]
+	// s = story_table[1]
     // s = '10192781'
     // alert(story_id)
     
@@ -158,14 +158,14 @@ if ((story_id != "") && (story_id != null)) {
         
         // for testing purposes
         // simulating more than one value pair in the cookie:
-        story_table = ('"' + story_id + '","' + story_title + '";') + ('"' + story_id + '","' + story_title + '";');
+        // story_table = ('"' + story_id + '","' + story_title + '";') + ('"' + story_id + '","' + story_title + '";');
         // alert(story_table);
         
         setCookie('npr_bookmarklet_story_table', story_table, 365);
-        
+        s = story_table
     }
     else {
-        alert('cookie set');
+        // alert('cookie set');
         imported_cookie = getCookie('npr_bookmarklet_story_table');
         
         // here is where I need to read the values from the cookie into the story_table
@@ -192,7 +192,7 @@ if ((story_id != "") && (story_id != null)) {
         // add new story id to table			
         story_table.push('"' + story_id + '","' + story_title + '";');
         setCookie('npr_bookmarklet_story_table', story_table, 365);
-        
+        s = story_table[1]
     }
     viewStoryTable();
 }
