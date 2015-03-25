@@ -1,0 +1,1 @@
+NPR Bookmarklets are intended to be used by both fans of NPR on the web, as well as journalists and web developers looking to do useful and interesting things with NPR (and public radio's) great web content.
